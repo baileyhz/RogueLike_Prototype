@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Belia_Hand
+  - Player
+  - Throwable
+  - Enemy
+  - DestructibleGround
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BG2
+    uniqueID: 3995292253
+    locked: 0
+  - name: BG
+    uniqueID: 2759934943
+    locked: 0
+  - name: Platform
+    uniqueID: 1967656615
+    locked: 0
+  - name: Enemy
+    uniqueID: 1517162857
+    locked: 0
+  - name: Player
+    uniqueID: 4135086605
+    locked: 0
