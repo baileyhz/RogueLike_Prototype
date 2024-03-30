@@ -11,14 +11,12 @@ public class PlayerState_Throw : PlayerState
 {
 	public override void Enter()
 	{
-		if(!controller.IsGrounded) controller.rigidbody.gravityScale = 2f;
 		animator.Play("Throw");
 		controller.ThrowThrowable();
 		Debug.Log("Now in Throw State");
 	}
 	public override void Exit()
 	{
-		controller.rigidbody.gravityScale = 1f;
 	}
 	public override void LogicUpdate()
 	{

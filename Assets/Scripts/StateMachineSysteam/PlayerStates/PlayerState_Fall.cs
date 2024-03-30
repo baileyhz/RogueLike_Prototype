@@ -10,13 +10,12 @@ public class PlayerState_Fall : PlayerState
 	public override void Enter()
     {
         animator.Play("JumpFall");
-        controller.rigidbody.gravityScale = 2f;
         Debug.Log("Now in Fall State");
     }
 
 	public override void Exit()
 	{
-		controller.rigidbody.gravityScale = 1f;
+
 	}
 
 	public override void LogicUpdate()

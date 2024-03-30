@@ -11,18 +11,15 @@ public class PlayerState_DoubleJump : PlayerState
 
     public override void Enter()
     {
-        controller.rigidbody.velocity = new Vector2(controller.rigidbody.velocity.x,0f);
+        controller.rigidbody.velocity = new Vector2(controller.rigidbody.velocity.x, 0f);
+		controller.Jump();
         controller.doubleJumpCount++;
         controller.IsJumping = true;
-        jumpYPos = controller.transform.position.y;
         animator.Play("JumpRise");
         Debug.Log("Now in double Jump State");
-        controller.rigidbody.gravityScale = 0.1f;
-        
     }
 	public override void Exit()
 	{
-		controller.rigidbody.gravityScale = 1f;
 		controller.IsJumping = false;
 	}
 
@@ -52,11 +49,8 @@ public class PlayerState_DoubleJump : PlayerState
 	}
     public override void PhysicUpdate()
     {
-		controller.Jump(jumpYPos);
 		controller.Move();
-		if (controller.rigidbody.velocity.y <= controller.jumpStartSpeed/3f)
-        {
+		if (controller.rigidbody.velocity.y <= controller.jumpStartSpeed/3f) 
             animator.Play("JumpMid");
-        }
     }
 }
