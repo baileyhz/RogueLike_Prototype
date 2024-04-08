@@ -13,11 +13,13 @@ public class PlayerState_WallClimb : PlayerState
     private float hlodMove;
     public override void Enter()
     {
+		controller.rigidbody.gravityScale = 0f;
         animator.Play("OnWall");
         Debug.Log("Now in OnWall State");
     }
 	public override void Exit()
 	{
+		controller.rigidbody.gravityScale = 1f;
 	}
 	public override void LogicUpdate()
     {

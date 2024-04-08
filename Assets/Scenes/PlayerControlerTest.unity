@@ -46766,35 +46766,11 @@ PrefabInstance:
       objectReference: {fileID: 2082704089}
     - target: {fileID: 9084933841617872653, guid: f4427992534e91641b92e3091c0d4dfc, type: 3}
       propertyPath: gravity
-      value: -9.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084933841617872653, guid: f4427992534e91641b92e3091c0d4dfc, type: 3}
-      propertyPath: wallJumpX
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084933841617872653, guid: f4427992534e91641b92e3091c0d4dfc, type: 3}
-      propertyPath: wallJumpY
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084933841617872653, guid: f4427992534e91641b92e3091c0d4dfc, type: 3}
-      propertyPath: jumpHeight
-      value: 3
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 9084933841617872653, guid: f4427992534e91641b92e3091c0d4dfc, type: 3}
       propertyPath: fallMaxSpeed
       value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084933841617872654, guid: f4427992534e91641b92e3091c0d4dfc, type: 3}
-      propertyPath: m_Mass
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9084933841617872654, guid: f4427992534e91641b92e3091c0d4dfc, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: fe66f12c01dc7b146be97bbafd8705f2, type: 2}
-    - target: {fileID: 9084933841617872654, guid: f4427992534e91641b92e3091c0d4dfc, type: 3}
-      propertyPath: m_GravityScale
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4427992534e91641b92e3091c0d4dfc, type: 3}
