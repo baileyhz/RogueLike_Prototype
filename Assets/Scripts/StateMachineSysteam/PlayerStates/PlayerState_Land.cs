@@ -11,7 +11,6 @@ public class PlayerState_Land : PlayerState
     {
         animator.Play("Land");
         Debug.Log("Now in Land State");
-        controller.rigidbody.gravityScale = 1.0f;
 		controller.doubleJumpCount = 0;
 		if (input.preJumpInput)
 		{

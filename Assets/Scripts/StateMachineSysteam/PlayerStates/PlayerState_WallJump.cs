@@ -16,18 +16,15 @@ public class PlayerState_WallJump : PlayerState
 
 	public override void Enter()
     {
-		//controller.groundDetect.ResetOnWall();
 		controller.IsJumping = true;
 		float posY = controller.transform.position.y;
 		float posX = controller.transform.position.x;
 		wallJumpTimer = 0;
 		animator.Play("JumpRise");
         Debug.Log("Now in WallJump State");
-		controller.rigidbody.gravityScale = 0.1f;
 	}
 	public override void Exit()
 	{
-		controller.rigidbody.gravityScale = 1f;
 		controller.IsJumping = false;
 	}
 

@@ -11,15 +11,13 @@ public class PlayerState_Jump : PlayerState
     
 	public override void Enter()
     {
-        controller.IsJumping = true;
-        jumpYPos = controller.transform.position.y;
+		controller.Jump();
+		controller.IsJumping = true;
         animator.Play("JumpRise");
         Debug.Log("Now in Jump State");
-        controller.rigidbody.gravityScale = 0.1f;
 	}
 	public override void Exit()
 	{
-		controller.rigidbody.gravityScale = 1f;
 		controller.IsJumping = false;
 	}
 
@@ -53,7 +51,7 @@ public class PlayerState_Jump : PlayerState
 
     public override void PhysicUpdate()
     {
-		controller.Jump(jumpYPos);
+		
 
 		if (controller.rigidbody.velocity.y <= controller.jumpStartSpeed / 3f) animator.Play("JumpMid");
 

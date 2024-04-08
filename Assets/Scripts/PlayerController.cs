@@ -163,24 +163,27 @@ public class PlayerController : MonoBehaviour
 			transform.localScale = new Vector3(-1, 1, 1);
 		}
 	}
-	public void Jump(float startingY)
+	public void Jump()
 	{
-		//rigidbody.AddForce(Vector2.up * 3,ForceMode2D.Force);
-		float targetY = startingY + jumpHeight;
-		float currentY = transform.position.y;
+		//float targetY = startingY + jumpHeight;
+		//float currentY = transform.position.y;
 
-		// 計算跳到最高處的進度
-		float jumpProgress = Mathf.Clamp01((currentY - startingY) / jumpHeight);
+		float v_init = Mathf.Sqrt(2 * Physics.gravity.magnitude * rigidbody.gravityScale * jumpHeight);
+		float force = rigidbody.mass * v_init;
+		rigidbody.AddForce(Vector2.up * force, ForceMode2D.Impulse);
 
-		// 計算跳躍高度
-		float jumpVelocity = Mathf.Lerp(jumpStartSpeed, 0f, Mathf.Pow(jumpProgress, 2));
+		//// 計算跳到最高處的進度
+		//float jumpProgress = Mathf.Clamp01((currentY - startingY) / jumpHeight);
 
-		// 如果跳躍進度接近1或超過目標高度時，將跳躍速度設為0
-		if (jumpProgress >= 0.95f || currentY >= targetY)
-		{
-			jumpVelocity = 0f;
-		}
-		rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpVelocity);
+		//// 計算跳躍高度
+		//float jumpVelocity = Mathf.Lerp(jumpStartSpeed, 0f, Mathf.Pow(jumpProgress, 2));
+
+		//// 如果跳躍進度接近1或超過目標高度時，將跳躍速度設為0
+		//if (jumpProgress >= 0.95f || currentY >= targetY)
+		//{
+		//	jumpVelocity = 0f;
+		//}
+		//rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpVelocity);
 	}
 	public void Dash(float startingX)
 	{
