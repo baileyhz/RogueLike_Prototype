@@ -9,6 +9,7 @@ public class PlayerState_Fall : PlayerState
 	
 	public override void Enter()
     {
+		controller.rigidbody.velocity = new Vector2 (controller.rigidbody.velocity.x, 0f);
         animator.Play("JumpFall");
         Debug.Log("Now in Fall State");
     }
