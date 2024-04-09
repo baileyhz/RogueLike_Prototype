@@ -35,7 +35,7 @@ public class PlayerState_Jump : PlayerState
         {
             stateMachine.SwitchState(typeof(PlayerState_DoubleJump));
         }
-        if (controller.IsFall || controller.IsTop || input.StopJump)
+        if (controller.IsFall || controller.IsTop)
         {
 			stateMachine.SwitchState(typeof(PlayerState_Fall));
         }
